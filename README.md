@@ -6,9 +6,11 @@
 
 Machine learning project predicting short-term death or clinical deterioration in emergency department patients using the MIMIC-IV / MDS-ED dataset. Combines supervised (Random Forest, Logistic Regression, SVM) and unsupervised (PCA, KMeans) approaches to identify high-risk patient patterns.
 
+Data source from: https://physionet.org/content/multimodal-emergency-benchmark/1.0.0/
+
 # File Types
 
-**00_mds_ed.csv:** Raw CSV of the MIMIC IV dataset. Too big for push. 
+**00_mds_ed.csv:** Raw CSV of the MIMIC IV dataset. Too big for push. Added a _sample.csv file per rubric requirements. See repo.
 
 **.ipynb:** Jupyter notebooks containing preprocessing, EDA, supervised, and unsupervised modeling scripts.  
 
@@ -52,4 +54,4 @@ Full detailed report with design summary and outputs.
 **final_pkl/df_best.pkl:** Final dataset  
 **unsupervised_outputs/:** PCA and clustering results  
 
-To run, install the requirements.txt file and load the preprocessed pkl under outputs/final_pkl/df_best.pkl. The notebooks run independently. You do not need to run in order as presented.
+To run, install the items as stated in the requirements.txt file. The notebooks run independently of order using the stored pkl file. 
