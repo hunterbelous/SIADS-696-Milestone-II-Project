@@ -34,16 +34,16 @@ This project develops an early warning system using the MIMIC-IV / MDS-ED datase
 Loads and cleans the MDS-ED dataset. Removes identifiers, replaces sentinel values, drops sparse features, rounds continuous variables, and creates derived outcomes such as mortality_28d and death_or_deterioration_any. Saves the engineered dataset as df_best.pkl.
 
 **02_eda_cleaned.ipynb**  
-Performs exploratory data analysis on the cleaned dataset. Displays missing value summaries, distributions, correlations, and outcome frequencies to confirm dataset readiness for modeling.
+Loads the MDS-ED dataset, performs exploratory data analysis before cleaning and preparing for machine learning with feature selection and engineering.
 
 **03_unsupervised.ipynb**  
 Runs PCA with n_components = 0.95, retaining 96% of the variance. Applies KMeans clustering, achieving a best silhouette score of about 0.93 with k = 3. Produces 2D and 3D cluster visualizations and outcome overlays to show subgroup enrichment.
 
 **04_supervised_phase1.ipynb**  
-Uses PyCaret for initial supervised modeling and comparison across multiple algorithms. Provides insight into early performance patterns and helps select the top three models for deeper tuning.
+Uses PyCaret to compare multiple supervised modeling techniques across a variety of performance metrics. Also includes a more dedicated comparison of SVM, logistic regression and random forest classifer.  Demonstrates that random forest classification performs best based on AUPRC.  
 
 **05_three_models_milestone2.ipynb**  
-Implements final supervised modeling. Builds Logistic Regression, Random Forest, and SVM pipelines with SMOTE class balancing and cross-validation. Evaluates models using AUPRC, precision-recall curves, and feature importance. The Random Forest model performed best overall.
+Implements final supervised modeling. More in depth exploration of random forest classifier model with the best performing parameters from supervised_phase1.  Probes the model for insights into key features, model stability and failures.  
 
 **06_three_models_milestone2_PCA.ipynb**  
 Extends the final supervised modeling workflow by incorporating PCA-transformed data. Loads df_best.pkl and the corresponding PCA scores (pca_scores_2025_10_21.csv) to evaluate how dimensionality reduction affects model performance. Compares Logistic Regression, Random Forest, and SVM results with and without PCA features, confirming reduced AUPRC performance (~0.34 vs. 0.61 baseline) but faster training time.
