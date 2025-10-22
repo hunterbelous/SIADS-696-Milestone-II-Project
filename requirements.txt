@@ -5,3 +5,4 @@ scikit-learn==1.5.2
 pycaret==3.3.2
 shap==0.44.1
 scipy==1.14.1
+python version 3.12.10 (for pycaret)
