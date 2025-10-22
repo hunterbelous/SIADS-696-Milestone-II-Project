@@ -53,7 +53,7 @@ Full detailed report with design summary and outputs.
 
 # Outputs Folder
 
-**final_pkl/df_best.pkl:** Final dataset  
+**final_pkl/df_best.pkl:** Final dataset  (reference mds_best_sample.csv for final engineered dataset. Cannot import pkl due to size constraints.)
 **unsupervised_outputs/:** PCA and clustering results  
 
 To run, install the items as stated in the requirements.txt file. The notebooks run independently of order using the stored pkl file. 
